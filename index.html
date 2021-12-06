@@ -1,0 +1,47 @@
+<!doctype HTML>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    </head>
+    <script src="./aframe.min.js"></script>
+    <!-- we import arjs version without NFT but with marker + location based support -->
+    <script src="./aframe-ar.js"></script>
+    <script src="./aframe-extras.loaders.min.js"></script>
+    <script src="./events.js"></script>
+    
+
+    <body style='margin : 0px; overflow: hidden;'>
+        <a-scene
+            device-orientation-permission-ui="enabled: false"
+            vr-mode-ui="enabled: false"
+            markerhandler embedded arjs='sourceType: webcam; debugUIEnabled: false;'>
+
+        <a-assets>
+            <video
+                id="vid"
+                src="./Jingle Bells Jingle Bells - Christmas Song for Children - X'mas Music - Merry Christmas.mp4"
+                preload="auto"
+                response-type="arraybuffer"
+                autoplay="false"
+                loop        
+                crossorigin
+                webkit-playsinline
+                playsinline
+            ></video>
+        </a-assets>
+       <!-- <a-videosphere src="video.mp4"></a-videosphere> -->
+       <!-- <a-sky color="#6EBAA7"></a-sky> -->
+
+        <a-marker preset="hiro" markerhandler smooth="true" smoothCount="5" smoothTolerance="0.01" smoothThreshold="2">
+            <a-video
+                src="#vid"
+                scale="1 1 1"
+                position="0 0.4 0"
+                rotation="-90 0 0"
+            ></a-video>
+        </a-marker>
+
+        <a-entity camera></a-entity>
+        </a-scene>
+    </body>
+</html>

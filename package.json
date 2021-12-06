@@ -1,0 +1,21 @@
+{
+  "homepage": "http://Eva-spe.github.io/AR-Sound",
+  "name": "ar-video-5dec2021",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "deploy": "gh-pages -d build",
+    "predeploy": "yarn run build",
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mona",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.3"
+  }
+}
